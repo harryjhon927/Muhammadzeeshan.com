@@ -1,61 +1,159 @@
-<section class="home section" id="home">
-    <div class="home__container container grid">
-        <div class="home__data">
-            <h1 class="home__name">Muhammad Zeeshan</h1>
-            <h3 class="home__subtitle">AI-Driven SEO Specialist | 4 Years Experience 🚀 Helping 50+ Websites & Global Brands Achieve Top Google Rankings</h3>
-            <p class="home__description">
-                Specializing in <b>Technical SEO & Advanced Workflow Automation</b>. Based in Faisalabad, Pakistan.
-            </p>
-            
-            <div class="home__social" style="display: flex; gap: 1.25rem; margin: 1.5rem 0;">
-                <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" class="home__social-link" style="font-size: 1.8rem; color: #0077b5;"><i class="ri-linkedin-box-fill"></i></a>
-                <a href="https://x.com/Mzeeshan4554" target="_blank" class="home__social-link" style="font-size: 1.8rem; color: #000;"><i class="ri-twitter-x-fill"></i></a>
-                <a href="https://wa.me/923019343535" target="_blank" class="home__social-link" style="font-size: 1.8rem; color: #25d366;"><i class="ri-whatsapp-line"></i></a>
-                <a href="mailto:zeeshanhaiderjhang01@gmail.com" class="home__social-link" style="font-size: 1.8rem; color: var(--first-color);"><i class="ri-mail-line"></i></a>
-            </div>
-
-            <div style="margin-top: 2rem;">
-                <a href="tel:+923019343535" class="footer__btn" style="display: inline-block; padding: 1rem 2rem; border-radius: 0.5rem; background: #3b82f6; color: #fff; font-weight: 700;">Call Now</a>
-            </div>
-        </div>
-        <div class="home__image text-center">
-            <img src="1766061402151 (1).jfif" alt="Muhammad Zeeshan" class="home__img" style="width: 100%; max-width: 340px; border-radius: 2rem; border: 8px solid #fff; box-shadow: 0 20px 25px rgba(0,0,0,0.1);">
-        </div>
-    </div>
-</section>
-
-<section class="section container" id="projects">
-    <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.2rem; color: var(--title-color); font-weight: 800;">Featured Projects</h2>
-    <div class="projects__container grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Zeeshan | AI-Driven SEO & Automation Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css">
+    <style>
+        :root { 
+            --first-color: #1e40af; 
+            --title-color: #0f172a; 
+            --text-color: #475569; 
+            --body-color: #f8fafc; 
+            --footer-bg: #162130;
+        }
+        * { box-sizing: border-box; padding: 0; margin: 0; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--body-color); color: var(--text-color); line-height: 1.6; }
+        a { text-decoration: none; transition: .3s; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        .grid { display: grid; gap: 1.5rem; }
+        .section { padding: 6rem 0 2rem; }
         
-        <article class="projects__card" style="background: white; padding: 2rem; border-radius: 1.5rem; border: 1px solid #e2e8f0; transition: .3s;">
-            <h3 class="projects__title">BestSEOServices.co</h3>
-            <p>Comprehensive SEO audits and strategic ranking solutions for global businesses.</p>
-            <a href="https://www.bestseoservices.co/" target="_blank" style="color: var(--first-color); font-weight: 700; display: block; margin-top: 1.5rem;">Visit Site →</a>
-        </article>
+        /* Navigation */
+        .header { width: 100%; background: #fff; position: fixed; top: 0; left: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .nav { height: 4.5rem; display: flex; justify-content: space-between; align-items: center; }
+        .nav__logo { font-weight: 800; color: var(--first-color); font-size: 1.5rem; }
 
-        <article class="projects__card" style="background: white; padding: 2rem; border-radius: 1.5rem; border: 1px solid #e2e8f0; transition: .3s;">
-            <h3 class="projects__title">MostPopularAITools.com</h3>
-            <p>Managed full-scale SEO and meta-data automation for a global AI directory.</p>
-            <a href="https://mostpopularaitools.com" target="_blank" style="color: var(--first-color); font-weight: 700; display: block; margin-top: 1.5rem;">Visit Site →</a>
-        </article>
+        /* Home/Hero Section */
+        .home__container { padding-top: 5rem; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 3rem; }
+        .home__name { font-size: 3.5rem; color: var(--title-color); margin-bottom: 0.5rem; font-weight: 800; }
+        .home__subtitle { font-size: 1.2rem; font-weight: 700; color: var(--first-color); margin-bottom: 1rem; line-height: 1.4; }
+        .home__description { margin-bottom: 2rem; font-size: 1.1rem; }
+        .home__img { width: 100%; max-width: 380px; border-radius: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
 
-        <article class="projects__card" style="background: white; padding: 2rem; border-radius: 1.5rem; border: 1px solid #e2e8f0; transition: .3s;">
-            <h3 class="projects__title">Quran Coaching</h3>
-            <p>Leading organic growth and search visibility for an international educational platform.</p>
-            <a href="https://www.qurancoaching.com/" target="_blank" style="color: var(--first-color); font-weight: 700; display: block; margin-top: 1.5rem;">Visit Site →</a>
-        </article>
+        /* Certifications Grid */
+        .cert__container { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+        .cert__card { background: white; padding: 1.5rem; border-radius: 1rem; border-left: 4px solid var(--first-color); box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: .3s; display: block; color: inherit; }
+        .cert__card:hover { transform: translateY(-5px); border-left-color: #25d366; }
 
-        <article class="projects__card" style="background: white; padding: 2rem; border-radius: 1.5rem; border: 1px solid #e2e8f0; transition: .3s;">
-            <h3 class="projects__title">Ferro.pk</h3>
-            <p>E-commerce SEO strategy focusing on product rankings and conversion rate optimization.</p>
-            <a href="https://ferro.pk/" target="_blank" style="color: var(--first-color); font-weight: 700; display: block; margin-top: 1.5rem;">Visit Site →</a>
-        </article>
+        /* Featured Projects */
+        .projects__title-main { text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 4rem; color: var(--title-color); }
+        .projects__container { grid-template-columns: 1fr; gap: 2rem; }
+        .projects__card { background: white; padding: 2.5rem; border-radius: 1.5rem; border: 1px solid #eef2f6; transition: .3s; }
+        .projects__card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 
-        <article class="projects__card" style="background: white; padding: 2rem; border-radius: 1.5rem; border: 1px solid #e2e8f0; transition: .3s;">
-            <h3 class="projects__title">Door2Door Repair</h3>
-            <p>Local SEO and Google Business Profile optimization for on-demand repair services.</p>
-            <a href="https://door2doormobilerepair.com/" target="_blank" style="color: var(--first-color); font-weight: 700; display: block; margin-top: 1.5rem;">Visit Site →</a>
-        </article>
-    </div>
-</section>
+        /* Client Reviews */
+        .review__container { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .review__card { background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.02); }
+        .review__stars { color: #facc15; margin-bottom: 1rem; font-size: 1.2rem; }
+
+        /* PREMIUM FOOTER (As requested) */
+        .footer { background-color: var(--footer-bg); color: #fff; padding: 5rem 0 2rem; border-radius: 4rem 4rem 0 0; margin-top: 5rem; }
+        .footer__main-title { font-size: 2.2rem; font-weight: 700; text-align: center; margin-bottom: 4rem; color: #fff; }
+        .footer__container { grid-template-columns: 1.5fr 1fr 1.5fr; gap: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 3rem; }
+        .footer__subtitle { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #fff; }
+        .footer__text { color: #94a3b8; font-size: 1rem; margin-bottom: 0.5rem; }
+        .footer__socials { display: flex; gap: 1rem; margin-top: 1.5rem; }
+        .footer__icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; color: #fff; font-size: 1.2rem; }
+        .icon-linkedin { background: #0077b5; } .icon-twitter { background: #1da1f2; } .icon-whatsapp { background: #25d366; }
+        .footer__links-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; }
+        .footer__link { color: #94a3b8; display: block; margin-bottom: 0.8rem; font-size: 1.1rem; }
+        .footer__link:hover { color: #fff; }
+        .footer__btn { background: #3b82f6; color: #fff; padding: 0.8rem 2.5rem; border-radius: 0.5rem; display: block; text-align: center; font-weight: 700; margin-bottom: 1rem; font-size: 1.1rem; }
+        .footer__copy { text-align: center; padding-top: 2rem; font-size: 0.9rem; color: #64748b; margin-top: 2rem; }
+
+        @media screen and (max-width: 992px) { .cert__container, .review__container { grid-template-columns: repeat(2, 1fr); } }
+        @media screen and (max-width: 768px) {
+            .home__container, .cert__container, .review__container, .footer__container { grid-template-columns: 1fr; text-align: center; }
+            .home__image { order: -1; } .footer__socials { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Muhammad Zeeshan.</a>
+            <div style="display: flex; gap: 1.5rem; align-items: center;">
+                <a href="https://wa.me/923019343535" target="_blank" style="color: #25d366; font-size: 1.4rem;"><i class="ri-whatsapp-line"></i></a>
+                <a href="mailto:zeeshanhaiderjhang01@gmail.com" style="color: var(--first-color); font-size: 1.4rem;"><i class="ri-mail-line"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="home container grid section">
+            <div class="home__data">
+                <h1 class="home__name">Muhammad Zeeshan</h1>
+                <h2 class="home__subtitle">AI-Driven SEO Specialist | 4 Years Experience 🚀<br>Helping 50+ Websites & Global Brands Achieve Top Google Rankings</h2>
+                <p class="home__description">Specializing in <b>Technical SEO & Advanced Workflow Automation</b>. Based in Faisalabad, Pakistan.</p>
+                <a href="tel:+923019343535" class="footer__btn" style="display: inline-block; width: auto;">Call Now</a>
+            </div>
+            <div class="home__image">
+                <img src="1766061402151 (1).jfif" alt="Zeeshan Profile" class="home__img">
+            </div>
+        </section>
+
+        <section class="section container" id="certifications">
+            <h2 class="projects__title-main">Verified Certifications</h2>
+            <div class="cert__container grid">
+                <a href="https://verify.skilljar.com/c/in9f9xtuvfvj" target="_blank" class="cert__card"><b>SEO Crash Course</b><br><small>Semrush Academy</small></a>
+                <a href="https://skillshop.credential.net/776865d2-b9db-4c17-87cf-1ebb3275cff1" target="_blank" class="cert__card"><b>Google Analytics</b><br><small>Google</small></a>
+                <a href="https://app-na2.hubspot.com/academy/achievements/6fdmmb6q" target="_blank" class="cert__card"><b>SEO II Certified</b><br><small>HubSpot</small></a>
+                </div>
+        </section>
+
+        <section class="section container" id="projects">
+            <h2 class="projects__title-main">Featured Projects</h2>
+            <div class="projects__container grid">
+                <article class="projects__card">
+                    <h3>BestSEOServices.co</h3>
+                    <p>Comprehensive SEO audits and strategic ranking solutions for global businesses.</p>
+                    <a href="https://www.bestseoservices.co/" target="_blank" style="color: var(--first-color); font-weight: 700; display: block; margin-top: 1rem;">Visit Site →</a>
+                </article>
+                </div>
+        </section>
+
+        <section class="section container" id="reviews">
+            <h2 class="projects__title-main">Client Reviews</h2>
+            <div class="review__container grid">
+                <div class="review__card"><div class="review__stars">★★★★★</div><p>"Improved organic traffic by 400%."</p><b>- Tech Partner</b></div>
+                <div class="review__card"><div class="review__stars">★★★★★</div><p>"The best automation expert."</p><b>- Global Brand</b></div>
+                <div class="review__card"><div class="review__stars">★★★★★</div><p>"Ranked us in record time."</p><b>- Service Lead</b></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer__main-title">Let's Connect & Grow Together</h2>
+            <div class="footer__container grid">
+                <div>
+                    <h3 class="footer__subtitle">Muhammad Zeeshan</h3>
+                    <p class="footer__text">Faisalabad, Pakistan</p>
+                    <p class="footer__text">zeeshanhaiderjhang01@gmail.com</p>
+                    <div class="footer__socials">
+                        <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" class="footer__icon icon-linkedin"><i class="ri-linkedin-fill"></i></a>
+                        <a href="https://x.com/Mzeeshan4554" target="_blank" class="footer__icon icon-twitter"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="https://wa.me/923019343535" target="_blank" class="footer__icon icon-whatsapp"><i class="ri-whatsapp-line"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer__links-title">Explore</h3>
+                    <a href="#projects" class="footer__link">Projects</a>
+                    <a href="#certifications" class="footer__link">Certifications</a>
+                    <a href="#reviews" class="footer__link">Client Reviews</a>
+                </div>
+
+                <div>
+                    <h3 class="footer__links-title">Hire Me</h3>
+                    <a href="tel:+923019343535" class="footer__btn">Call Now</a>
+                    <a href="mailto:zeeshanhaiderjhang01@gmail.com" class="footer__btn" style="background: transparent; border: 1px solid #3b82f6;">Email Me</a>
+                </div>
+            </div>
+            <p class="footer__copy">© 2026 Developed By Muhammad Zeeshan. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
