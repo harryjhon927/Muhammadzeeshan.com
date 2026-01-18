@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css">
     
     <style>
-        /* Modern Portfolio Styling */
         :root { 
             --first-color: #1e40af; 
             --title-color: #0f172a; 
@@ -22,7 +21,7 @@
             color: var(--text-color); 
             line-height: 1.6; 
         }
-        a { text-decoration: none; }
+        a { text-decoration: none; transition: .3s; }
         .container { max-width: 1024px; margin: 0 auto; padding: 0 1.5rem; }
         .grid { display: grid; gap: 1.5rem; }
         .section { padding: 5rem 0 2rem; }
@@ -32,9 +31,7 @@
             width: 100%; 
             background-color: var(--container-color); 
             position: fixed; 
-            top: 0; 
-            left: 0; 
-            z-index: 100; 
+            top: 0; left: 0; z-index: 100; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
         }
         .nav { height: 4.5rem; display: flex; justify-content: space-between; align-items: center; }
@@ -56,7 +53,9 @@
             border: 8px solid #fff; 
             box-shadow: 0 20px 25px rgba(0,0,0,0.1); 
         }
-        .home__description b { color: var(--first-color); }
+        .home__social { display: flex; gap: 1.25rem; margin-top: 2rem; }
+        .home__social-link { font-size: 1.5rem; color: var(--text-color); }
+        .home__social-link:hover { color: var(--first-color); }
         
         /* Projects Section */
         .projects__container { grid-template-columns: repeat(2, 1fr); }
@@ -65,17 +64,11 @@
             padding: 2rem; 
             border-radius: 1.5rem; 
             border: 1px solid #e2e8f0; 
-            transition: .4s; 
-        }
-        .projects__card:hover { 
-            transform: translateY(-10px); 
-            border-color: var(--first-color); 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
         }
         .projects__title { font-size: 1.25rem; color: var(--title-color); margin-bottom: .75rem; }
         .projects__link { color: var(--first-color); font-weight: 600; display: inline-flex; align-items: center; gap: .25rem; margin-top: 1rem; }
         
-        /* Footer/Contact Section */
+        /* Contact Section */
         .contact { background-color: var(--title-color); color: #fff; padding: 4rem 0; text-align: center; border-radius: 3rem 3rem 0 0; margin-top: 4rem; }
         .button { 
             background-color: var(--first-color); 
@@ -83,14 +76,13 @@
             border-radius: .75rem; 
             display: inline-block; 
             font-weight: 700; 
-            transition: .3s;
         }
-        .button:hover { opacity: 0.9; }
+        .whatsapp-btn { background-color: #25d366; color: white; display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem; }
 
         @media screen and (max-width: 768px) {
             .home__container, .projects__container { grid-template-columns: 1fr; text-align: center; }
-            .home__name { font-size: 2.25rem; }
             .home__image { order: -1; margin-bottom: 2rem; }
+            .home__social { justify-content: center; }
         }
     </style>
 </head>
@@ -101,7 +93,10 @@
                 <span class="nav__logo-circle">MZ</span>
                 <span class="nav__logo-name">Muhammad Zeeshan.</span>
             </a>
-            <a href="mailto:zeshanfaisal308@gmail.com" class="button" style="padding: .6rem 1.2rem; margin: 0; font-size: .9rem;">Free Audit</a>
+            <div style="display: flex; gap: 1rem;">
+                <a href="tel:+923019343535" class="nav__social-link" style="font-size: 1.2rem; color: var(--first-color);"><i class="ri-phone-fill"></i></a>
+                <a href="https://wa.me/923019343535" target="_blank" style="color: #25d366; font-size: 1.2rem;"><i class="ri-whatsapp-line"></i></a>
+            </div>
         </nav>
     </header>
 
@@ -109,14 +104,22 @@
         <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__data">
-                    <h1 class="home__name">Rank #1 with <br>AI-Driven SEO</h1>
+                    <h1 class="home__name">AI-Driven SEO <br>Expert</h1>
                     <p class="home__description">
-                        I am <b>Muhammad Zeeshan</b>, a Professional SEO Specialist based in Faisalabad. 
-                        With 4+ years of experience, I specialize in Technical SEO and Data Analytics to drive massive organic growth.
+                        I am <b>Muhammad Zeeshan</b>, based in Faisalabad. 
+                        SEO Specialist with 4+ years of experience in Technical SEO and Data Analytics.
                     </p>
-                    <div style="margin-top: 2.5rem; display: flex; gap: 1.5rem; justify-content: center; align-items: center;">
-                        <a href="#projects" class="button">View Projects</a>
-                        <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" style="font-size: 1.5rem; color: var(--first-color);"><i class="ri-linkedin-box-line"></i></a>
+                    
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" class="home__social-link"><i class="ri-linkedin-box-line"></i></a>
+                        <a href="https://github.com/harryjhon927" target="_blank" class="home__social-link"><i class="ri-github-line"></i></a>
+                        <a href="https://x.com/Mzeeshan4554" target="_blank" class="home__social-link"><i class="ri-twitter-x-line"></i></a>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <a href="https://wa.me/923019343535" target="_blank" class="button whatsapp-btn">
+                            <i class="ri-whatsapp-line"></i> Message on WhatsApp
+                        </a>
                     </div>
                 </div>
                 <div class="home__image text-center">
@@ -126,60 +129,48 @@
         </section>
 
         <section class="projects section container" id="projects">
-            <h2 style="font-size: 2rem; margin-bottom: 3rem; color: var(--title-color); text-align: center;">Featured Case Studies</h2>
+            <h2 style="font-size: 2rem; margin-bottom: 3rem; color: var(--title-color); text-align: center;">Strategic Case Studies</h2>
             <div class="projects__container grid">
                 <article class="projects__card">
                     <h3 class="projects__title">MostPopularAITools.com</h3>
-                    <p>Managed complete SEO lifecycle, metadata strategy, and authority outreach for an AI directory platform.</p>
-                    <a href="https://mostpopularaitools.com" target="_blank" class="projects__link">Visit Website <i class="ri-arrow-right-up-line"></i></a>
+                    <p>Managed SEO lifecycle, metadata, and outreach for an AI directory.</p>
+                    <a href="https://mostpopularaitools.com" target="_blank" class="projects__link">Visit Site <i class="ri-arrow-right-up-line"></i></a>
                 </article>
 
                 <article class="projects__card">
                     <h3 class="projects__title">Quran Coaching</h3>
-                    <p>International SEO growth lead for a global educational platform, optimizing for global search visibility.</p>
-                    <a href="https://www.qurancoaching.com/" target="_blank" class="projects__link">Visit Website <i class="ri-arrow-right-up-line"></i></a>
+                    <p>International SEO growth lead for a global educational platform.</p>
+                    <a href="https://www.qurancoaching.com/" target="_blank" class="projects__link">Visit Site <i class="ri-arrow-right-up-line"></i></a>
                 </article>
 
                 <article class="projects__card">
                     <h3 class="projects__title">Ferro.pk</h3>
-                    <p>E-commerce SEO strategy and product-page optimization to increase organic traffic and conversions.</p>
-                    <a href="https://ferro.pk/" target="_blank" class="projects__link">Visit Website <i class="ri-arrow-right-up-line"></i></a>
+                    <p>E-commerce SEO strategy and product-page optimization.</p>
+                    <a href="https://ferro.pk/" target="_blank" class="projects__link">Visit Site <i class="ri-arrow-right-up-line"></i></a>
                 </article>
 
                 <article class="projects__card">
                     <h3 class="projects__title">Door2Door Repair</h3>
-                    <p>Local SEO domination for a mobile repair service, focusing on geo-targeted ranking and customer leads.</p>
-                    <a href="https://door2doormobilerepair.com/" target="_blank" class="projects__link">Visit Website <i class="ri-arrow-right-up-line"></i></a>
+                    <p>Local SEO domination for a mobile repair service.</p>
+                    <a href="https://door2doormobilerepair.com/" target="_blank" class="projects__link">Visit Site <i class="ri-arrow-right-up-line"></i></a>
                 </article>
             </div>
         </section>
 
         <section class="contact" id="contact">
             <div class="container">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Grow Your Traffic?</h2>
-                <p style="opacity: 0.8; margin-bottom: 2rem;">Available for SEO Audits and Data-Driven Consulting.</p>
-                <a href="mailto:zeshanfaisal308@gmail.com" class="button" style="background-color: #fff; color: var(--first-color);">Get My Free Audit</a>
-                <div style="margin-top: 3rem; opacity: 0.6; font-size: .9rem;">
-                    Location: Faisalabad, Pakistan
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Let's Audit Your Website</h2>
+                <p style="opacity: 0.8; margin-bottom: 2rem;">Call or Message for a Free SEO Strategy Session.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:+923019343535" class="button"><i class="ri-phone-line"></i> Call Now</a>
+                    <a href="mailto:zeshanfaisal308@gmail.com" class="button" style="background-color: #fff; color: var(--first-color);">Email Me</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer style="text-align: center; padding: 2rem 0; font-size: .8rem; color: var(--text-color);">
-        © 2026 Developed By Muhammad Zeeshan.
+        © 2026 Developed By Muhammad Zeeshan | Faisalabad, Pakistan.
     </footer>
-
-    <script>
-        /* Smooth Scroll for Navbar */
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
