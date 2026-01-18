@@ -43,9 +43,9 @@
             place-items: center; border-radius: 50%; 
         }
 
-        /* Home Section */
+        /* Home */
         .home__container { padding-top: 3rem; grid-template-columns: repeat(2, 1fr); align-items: center; }
-        .home__name { font-size: 3rem; color: var(--title-color); margin-bottom: 0.5rem; line-height: 1.2; }
+        .home__name { font-size: 3rem; color: var(--title-color); margin-bottom: 0.5rem; }
         .home__subtitle { font-size: 1.25rem; font-weight: 600; color: var(--first-color); margin-bottom: 1.5rem; }
         .home__img { 
             width: 100%; 
@@ -56,32 +56,31 @@
         }
         .home__social { display: flex; gap: 1.25rem; margin-top: 2rem; }
         .home__social-link { font-size: 1.6rem; color: var(--text-color); }
-        .home__social-link:hover { color: var(--first-color); }
-        
-        /* Projects Section */
-        .projects__container { grid-template-columns: repeat(2, 1fr); }
-        .projects__card { 
-            background-color: var(--container-color); 
-            padding: 2rem; 
-            border-radius: 1.5rem; 
-            border: 1px solid #e2e8f0; 
-        }
-        .projects__title { font-size: 1.25rem; color: var(--title-color); margin-bottom: .75rem; }
-        .projects__link { color: var(--first-color); font-weight: 600; display: inline-flex; align-items: center; gap: .25rem; margin-top: 1rem; }
-        
-        /* Contact Section */
-        .contact { background-color: var(--title-color); color: #fff; padding: 4rem 0; text-align: center; border-radius: 3rem 3rem 0 0; margin-top: 4rem; }
-        .button { 
-            background-color: var(--first-color); 
-            color: #fff; padding: 1rem 2rem; 
-            border-radius: .75rem; 
-            display: inline-block; 
-            font-weight: 700; 
-        }
-        .whatsapp-btn { background-color: #25d366; color: white; display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem; }
 
+        /* Unique Certification Grid */
+        .cert__container { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+        .cert__card { 
+            background: white; 
+            padding: 1.5rem; 
+            border-radius: 1rem; 
+            border-left: 4px solid var(--first-color); 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: .3s;
+        }
+        .cert__card:hover { transform: scale(1.02); box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
+        .cert__icon { font-size: 1.5rem; color: var(--first-color); margin-bottom: .5rem; display: block; }
+        .cert__title { font-size: .9rem; font-weight: 700; color: var(--title-color); margin-bottom: .25rem; }
+        .cert__issuer { font-size: .8rem; color: var(--text-color); }
+
+        /* Layout Fixes */
+        .projects__container { grid-template-columns: repeat(2, 1fr); }
+        .projects__card { background-color: var(--container-color); padding: 2rem; border-radius: 1.5rem; border: 1px solid #e2e8f0; }
+        .button { background-color: var(--first-color); color: #fff; padding: 1rem 2rem; border-radius: .75rem; display: inline-block; font-weight: 700; }
+        .whatsapp-btn { background-color: #25d366; color: white; display: inline-flex; align-items: center; gap: .5rem; }
+
+        @media screen and (max-width: 992px) { .cert__container { grid-template-columns: repeat(2, 1fr); } }
         @media screen and (max-width: 768px) {
-            .home__container, .projects__container { grid-template-columns: 1fr; text-align: center; }
+            .home__container, .projects__container, .cert__container { grid-template-columns: 1fr; text-align: center; }
             .home__image { order: -1; margin-bottom: 2rem; }
             .home__social { justify-content: center; }
         }
@@ -108,21 +107,16 @@
                     <h1 class="home__name">Muhammad Zeeshan</h1>
                     <h3 class="home__subtitle">SEO Specialist @ Tech Savy Crew (Remote)</h3>
                     <p class="home__description">
-                        Professional SEO Specialist with 4+ years of experience. 
-                        Specializing in Technical SEO and Data Analytics to drive organic growth for global brands.
+                        Based in Faisalabad, Pakistan. Professional SEO Specialist with 4+ years of experience. 
                     </p>
-                    
                     <div class="home__social">
-                        <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" class="home__social-link" title="LinkedIn"><i class="ri-linkedin-box-line"></i></a>
-                        <a href="https://medium.com/@zeeshanhaiderjhang01" target="_blank" class="home__social-link" title="Medium"><i class="ri-medium-line"></i></a>
-                        <a href="https://www.researchgate.net/profile/Muhammad-Zeeshan-233" target="_blank" class="home__social-link" title="ResearchGate"><i class="ri-microscope-line"></i></a>
-                        <a href="https://x.com/Mzeeshan4554" target="_blank" class="home__social-link" title="X (Twitter)"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" class="home__social-link"><i class="ri-linkedin-box-line"></i></a>
+                        <a href="https://medium.com/@zeeshanhaiderjhang01" target="_blank" class="home__social-link"><i class="ri-medium-line"></i></a>
+                        <a href="https://www.researchgate.net/profile/Muhammad-Zeeshan-233" target="_blank" class="home__social-link"><i class="ri-microscope-line"></i></a>
+                        <a href="https://x.com/Mzeeshan4554" target="_blank" class="home__social-link"><i class="ri-twitter-x-fill"></i></a>
                     </div>
-
                     <div style="margin-top: 2rem;">
-                        <a href="https://wa.me/923019343535" target="_blank" class="button whatsapp-btn">
-                            <i class="ri-whatsapp-line"></i> WhatsApp Message
-                        </a>
+                        <a href="https://wa.me/923019343535" target="_blank" class="button whatsapp-btn"><i class="ri-whatsapp-line"></i> WhatsApp Message</a>
                     </div>
                 </div>
                 <div class="home__image text-center">
@@ -131,31 +125,33 @@
             </div>
         </section>
 
+        <section class="section container">
+            <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--title-color); text-align: center;">Verified Certifications</h2>
+            <div class="cert__container grid">
+                <div class="cert__card"><i class="ri-google-fill cert__icon"></i><p class="cert__title">Google Analytics Certification</p><p class="cert__issuer">Google Digital Academy</p></div>
+                <div class="cert__card"><i class="ri-search-line cert__icon"></i><p class="cert__title">HubSpot SEO II Certified</p><p class="cert__issuer">HubSpot Academy</p></div>
+                <div class="cert__card"><i class="ri-line-chart-line cert__icon"></i><p class="cert__title">Technical SEO Certification</p><p class="cert__issuer">Semrush Academy</p></div>
+                <div class="cert__card"><i class="ri-award-line cert__icon"></i><p class="cert__title">Content Marketing Certified</p><p class="cert__issuer">HubSpot Academy</p></div>
+                <div class="cert__card"><i class="ri-map-pin-user-line cert__icon"></i><p class="cert__title">Google My Business</p><p class="cert__issuer">Google</p></div>
+                <div class="cert__card"><i class="ri-youtube-fill cert__icon"></i><p class="cert__title">YouTube SEO Strategy</p><p class="cert__issuer">Semrush Academy</p></div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: .9rem;">
+                <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/details/certifications/" target="_blank" style="color: var(--first-color); font-weight: 600;">View All 10+ Licenses on LinkedIn <i class="ri-external-link-line"></i></a>
+            </p>
+        </section>
+
         <section class="projects section container" id="projects">
             <h2 style="font-size: 2rem; margin-bottom: 3rem; color: var(--title-color); text-align: center;">Strategic Case Studies</h2>
             <div class="projects__container grid">
                 <article class="projects__card">
                     <h3 class="projects__title">MostPopularAITools.com</h3>
                     <p>Managed SEO lifecycle, metadata, and outreach for a global AI directory.</p>
-                    <a href="https://mostpopularaitools.com" target="_blank" class="projects__link">Visit Site <i class="ri-arrow-right-up-line"></i></a>
+                    <a href="https://mostpopularaitools.com" target="_blank" class="projects__link" style="color: var(--first-color);">Visit Site <i class="ri-arrow-right-up-line"></i></a>
                 </article>
-
                 <article class="projects__card">
                     <h3 class="projects__title">Quran Coaching</h3>
                     <p>International SEO growth lead for a global educational platform.</p>
-                    <a href="https://www.qurancoaching.com/" target="_blank" class="projects__link">Visit Site <i class="ri-arrow-right-up-line"></i></a>
-                </article>
-
-                <article class="projects__card">
-                    <h3 class="projects__title">Ferro.pk</h3>
-                    <p>E-commerce SEO strategy and product-page optimization for maximum conversions.</p>
-                    <a href="https://ferro.pk/" target="_blank" class="projects__link">Visit Site <i class="ri-arrow-right-up-line"></i></a>
-                </article>
-
-                <article class="projects__card">
-                    <h3 class="projects__title">Door2Door Repair</h3>
-                    <p>Local SEO domination for a mobile repair service, focusing on local search visibility.</p>
-                    <a href="https://door2doormobilerepair.com/" target="_blank" class="projects__link">Visit Site <i class="ri-arrow-right-up-line"></i></a>
+                    <a href="https://www.qurancoaching.com/" target="_blank" class="projects__link" style="color: var(--first-color);">Visit Site <i class="ri-arrow-right-up-line"></i></a>
                 </article>
             </div>
         </section>
@@ -163,7 +159,6 @@
         <section class="contact" id="contact">
             <div class="container">
                 <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Let's Rank Your Website</h2>
-                <p style="opacity: 0.8; margin-bottom: 2rem;">SEO Specialist at Tech Savy Crew (Remote). Available for consultations.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="tel:+923019343535" class="button"><i class="ri-phone-line"></i> Call Now</a>
                     <a href="mailto:zeeshanhaiderjhang01@gmail.com" class="button" style="background-color: #fff; color: var(--first-color);">Email Me</a>
