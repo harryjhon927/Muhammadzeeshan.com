@@ -10,16 +10,10 @@
         :root { --main-blue: #1e40af; }
         body { font-family: 'Inter', sans-serif; color: #0f172a; }
         .hero-section { padding: 80px 0; background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%); }
-        /* Image Style */
-        .profile-img { 
-            width: 100%; 
-            max-width: 350px; 
-            border-radius: 20px; 
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); 
-            border: 5px solid white;
-        }
+        .profile-img { width: 100%; max-width: 350px; border-radius: 20px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border: 5px solid white; }
         .project-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; transition: 0.3s; background: #fff; text-decoration: none; color: inherit; display: block; height: 100%; }
         .project-card:hover { transform: translateY(-5px); border-color: #3b82f6; }
+        .stats-img { width: 100%; border-radius: 10px; border: 1px solid #ddd; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -38,7 +32,7 @@
                     <h1 class="display-3 fw-bold mb-4">Rank #1 on Google with <span class="text-primary">AI-Driven SEO</span></h1>
                     <p class="fs-4 text-muted mb-5">
                         I am Muhammad Zeeshan, an SEO Specialist with 4+ years of experience. 
-                        I have helped 50+ websites dominate organic search results.
+                        Helping 50+ websites dominate organic search results.
                     </p>
                     <div class="d-flex justify-content-center justify-content-lg-start gap-4 mb-4">
                         <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" class="text-secondary fs-2"><i class="fab fa-linkedin"></i></a>
@@ -55,13 +49,49 @@
 
     <section id="projects" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center fw-bold mb-5">Proven SEO Results</h2>
+            <h2 class="text-center fw-bold mb-5">Proven SEO Performance</h2>
             <div class="row g-4">
-                <div class="col-md-4"><a href="https://mostpopularaitools.com" target="_blank" class="project-card text-center"><h4>MostPopularAITools</h4><p class="small text-muted">AI Directory SEO</p></a></div>
-                <div class="col-md-4"><a href="https://www.qurancoaching.com/" target="_blank" class="project-card text-center text-success"><h4>Quran Coaching</h4><p class="small text-muted">Global Growth</p></a></div>
-                <div class="col-md-4"><a href="https://ferro.pk/" target="_blank" class="project-card text-center"><h4>Ferro.pk</h4><p class="small text-muted">E-commerce SEO</p></a></div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <h4 class="fw-bold">MostPopularAITools.com</h4>
+                        <p class="small text-muted mb-2">AI Directory SEO & Metadata Management.</p>
+                        <p class="small text-success fw-bold"><i class="fas fa-chart-line"></i> +300% Organic Growth in 6 Months</p>
+                        <a href="https://mostpopularaitools.com" target="_blank" class="btn btn-sm btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card border-success text-success">
+                        <h4 class="fw-bold">Quran Coaching</h4>
+                        <p class="small text-muted mb-2">Global Organic Growth Strategy.</p>
+                        <p class="small fw-bold"><i class="fas fa-globe"></i> International Traffic Domination</p>
+                        <a href="https://www.qurancoaching.com/" target="_blank" class="btn btn-sm btn-outline-success">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-12">
+                    <div class="bg-white p-4 rounded-3 border">
+                        <h4 class="fw-bold mb-3"><i class="fas fa-search-console text-primary"></i> Data Analytics & GSC Highlights</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="small text-muted mb-1">Organic Impressions (Google Search Console)</p>
+                                <div class="bg-light p-2 text-center rounded">
+                                    <i class="fas fa-chart-area fa-5x text-primary opacity-25"></i>
+                                    <p class="mt-2 fw-bold text-primary">Consistent Upward Growth</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="small text-muted mb-1">User Traffic (Google Analytics)</p>
+                                <div class="bg-light p-2 text-center rounded">
+                                    <i class="fas fa-users fa-5x text-info opacity-25"></i>
+                                    <p class="mt-2 fw-bold text-info">High Engagement & Low Bounce Rate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-6"><a href="https://door2doormobilerepair.com/" target="_blank" class="project-card"><h4>Door2Door Repair</h4><p class="small text-muted">Local SEO Domination</p></a></div>
-                <div class="col-md-6"><a href="https://www.feetfinder.com/" target="_blank" class="project-card"><h4>FeetFinder</h4><p class="small text-muted">Technical Optimization</p></a></div>
+                <div class="col-md-6"><a href="https://ferro.pk/" target="_blank" class="project-card"><h4>Ferro.pk</h4><p class="small text-muted">E-commerce Revenue Optimization</p></a></div>
             </div>
         </div>
     </section>
