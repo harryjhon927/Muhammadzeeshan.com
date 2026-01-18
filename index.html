@@ -20,40 +20,41 @@
         .grid { display: grid; gap: 1.5rem; }
         .section { padding: 6rem 0 2rem; }
         
-        /* Navigation */
+        /* Navigation Header */
         .header { width: 100%; background: #fff; position: fixed; top: 0; left: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .nav { height: 4.5rem; display: flex; justify-content: space-between; align-items: center; }
         .nav__logo { font-weight: 800; color: var(--first-color); font-size: 1.5rem; }
 
-        /* Home Section - Image Right */
-        .home__container { padding-top: 6rem; grid-template-columns: 1.2fr 0.8fr; align-items: center; gap: 3rem; }
+        /* UNIQUE HERO SECTION - IMAGE RIGHT */
+        .home__container { padding-top: 7rem; grid-template-columns: 1.2fr 0.8fr; align-items: center; gap: 4rem; }
         .home__name { font-size: 3.5rem; color: var(--title-color); margin-bottom: 0.5rem; font-weight: 800; }
-        .home__subtitle { font-size: 1.3rem; font-weight: 700; color: var(--first-color); margin-bottom: 1rem; line-height: 1.4; }
-        .home__description { margin-bottom: 2rem; font-size: 1.1rem; }
+        .home__subtitle { font-size: 1.3rem; font-weight: 700; color: var(--first-color); margin-bottom: 1.5rem; line-height: 1.4; }
+        .home__description { margin-bottom: 2.5rem; font-size: 1.1rem; max-width: 550px; }
+        .home__buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
         .home__img-wrapper { display: flex; justify-content: flex-end; }
-        .home__img { width: 100%; max-width: 380px; border-radius: 2.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 8px solid #fff; }
+        .home__img { width: 100%; max-width: 380px; border-radius: 2.5rem; box-shadow: 0 30px 60px rgba(0,0,0,0.12); border: 8px solid #fff; }
 
-        /* Titles */
+        /* Section Styling */
         .section__title { text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 4rem; color: var(--title-color); }
 
-        /* Certifications Grid (All 12) */
+        /* Certifications Grid (12 Cards) */
         .cert__container { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
         .cert__card { background: white; padding: 1.5rem; border-radius: 1rem; border-left: 4px solid var(--first-color); box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: .3s; display: block; color: inherit; }
         .cert__card:hover { transform: translateY(-5px); border-left-color: #25d366; }
 
-        /* Projects Section (All 5) */
+        /* Projects Grid (5 Projects) */
         .projects__container { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-        .projects__card { background: white; padding: 2rem; border-radius: 1.5rem; border: 1px solid #eef2f6; transition: .3s; }
-        .projects__card:hover { border-color: var(--first-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .projects__card { background: white; padding: 2.5rem; border-radius: 2rem; border: 1px solid #eef2f6; transition: .3s; }
+        .projects__card:hover { border-color: var(--first-color); box-shadow: 0 15px 40px rgba(0,0,0,0.06); }
 
-        /* Client Reviews */
+        /* Client Reviews - 6 Detailed Cards */
         .review__container { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .review__card { background: white; padding: 2rem; border-radius: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; text-align: center; }
-        .review__stars { color: #facc15; margin-bottom: 1rem; font-size: 1.1rem; }
-        .review__text { font-size: 0.95rem; font-style: italic; min-height: 80px; }
+        .review__card { background: white; padding: 2rem; border-radius: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); text-align: center; border: 1px solid #f1f5f9; }
+        .review__stars { color: #facc15; margin-bottom: 1rem; font-size: 1.2rem; }
+        .review__text { font-size: 0.95rem; font-style: italic; min-height: 80px; color: var(--text-color); }
         .review__author { margin-top: 1.5rem; font-weight: 700; color: var(--title-color); display: block; }
 
-        /* PREMIUM FOOTER */
+        /* PREMIUM FOOTER - Identical to Image Layout */
         .footer { background-color: var(--footer-bg); color: #fff; padding: 5rem 0 2rem; border-radius: 4rem 4rem 0 0; margin-top: 5rem; }
         .footer__main-title { font-size: 2.2rem; font-weight: 700; text-align: center; margin-bottom: 4rem; color: #fff; }
         .footer__container { grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 3rem; }
@@ -82,7 +83,7 @@
             <a href="#" class="nav__logo">Muhammad Zeeshan.</a>
             <div style="display: flex; gap: 1.5rem; align-items: center;">
                 <a href="https://wa.me/923019343535" target="_blank" style="color: #25d366; font-size: 1.4rem;"><i class="ri-whatsapp-line"></i></a>
-                <a href="mailto:zeeshanhaiderjhang01@gmail.com" class="button" style="color: var(--first-color); font-size: 1.4rem;"><i class="ri-mail-line"></i></a>
+                <a href="mailto:zeeshanhaiderjhang01@gmail.com" style="color: var(--first-color); font-size: 1.4rem;"><i class="ri-mail-line"></i></a>
             </div>
         </nav>
     </header>
@@ -92,10 +93,10 @@
             <div class="home__data">
                 <h1 class="home__name">Muhammad Zeeshan</h1>
                 <h2 class="home__subtitle">AI-Driven SEO Specialist | 4 Years Experience 🚀<br>Helping 50+ Websites Achieve Top Google Rankings</h2>
-                <p class="home__description">Specializing in **Technical SEO & Advanced Workflow Automation**. Based in Faisalabad, Pakistan.</p>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <p class="home__description">Specializing in <b>Technical SEO & Advanced Workflow Automation</b>. Based in Faisalabad, Pakistan.</p>
+                <div class="home__buttons">
                     <a href="tel:+923019343535" class="footer__btn" style="display: inline-block; width: auto;">Call Now</a>
-                    <a href="https://wa.me/923019343535" target="_blank" class="footer__btn" style="display: inline-block; width: auto; background: #25d366;">WhatsApp Audit</a>
+                    <a href="https://wa.me/923019343535" target="_blank" class="footer__btn" style="display: inline-block; width: auto; background: #25d366; border: none;">WhatsApp Audit</a>
                 </div>
             </div>
             <div class="home__img-wrapper">
