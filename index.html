@@ -26,24 +26,34 @@
         .nav__logo { font-weight: 800; color: var(--first-color); font-size: 1.5rem; }
 
         /* Home Section - Image Right */
-        .home__container { padding-top: 5rem; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 3rem; }
+        .home__container { padding-top: 6rem; grid-template-columns: 1.2fr 0.8fr; align-items: center; gap: 3rem; }
         .home__name { font-size: 3.5rem; color: var(--title-color); margin-bottom: 0.5rem; font-weight: 800; }
-        .home__subtitle { font-size: 1.2rem; font-weight: 700; color: var(--first-color); margin-bottom: 1rem; }
+        .home__subtitle { font-size: 1.3rem; font-weight: 700; color: var(--first-color); margin-bottom: 1rem; line-height: 1.4; }
+        .home__description { margin-bottom: 2rem; font-size: 1.1rem; }
+        .home__img-wrapper { display: flex; justify-content: flex-end; }
         .home__img { width: 100%; max-width: 380px; border-radius: 2.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 8px solid #fff; }
+
+        /* Titles */
+        .section__title { text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 4rem; color: var(--title-color); }
 
         /* Certifications Grid (All 12) */
         .cert__container { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-        .cert__card { background: white; padding: 1.25rem; border-radius: 1rem; border-left: 4px solid var(--first-color); box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: .3s; display: block; color: inherit; }
+        .cert__card { background: white; padding: 1.5rem; border-radius: 1rem; border-left: 4px solid var(--first-color); box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: .3s; display: block; color: inherit; }
         .cert__card:hover { transform: translateY(-5px); border-left-color: #25d366; }
-        .cert__title { font-size: .85rem; font-weight: 700; color: var(--title-color); margin-bottom: .25rem; line-height: 1.3; }
-        .cert__issuer { font-size: .75rem; color: var(--text-color); }
 
         /* Projects Section (All 5) */
-        .projects__container { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .projects__container { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
         .projects__card { background: white; padding: 2rem; border-radius: 1.5rem; border: 1px solid #eef2f6; transition: .3s; }
         .projects__card:hover { border-color: var(--first-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 
-        /* PREMIUM FOOTER (Let's Connect & Grow Together) */
+        /* Client Reviews */
+        .review__container { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .review__card { background: white; padding: 2rem; border-radius: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; text-align: center; }
+        .review__stars { color: #facc15; margin-bottom: 1rem; font-size: 1.1rem; }
+        .review__text { font-size: 0.95rem; font-style: italic; min-height: 80px; }
+        .review__author { margin-top: 1.5rem; font-weight: 700; color: var(--title-color); display: block; }
+
+        /* PREMIUM FOOTER */
         .footer { background-color: var(--footer-bg); color: #fff; padding: 5rem 0 2rem; border-radius: 4rem 4rem 0 0; margin-top: 5rem; }
         .footer__main-title { font-size: 2.2rem; font-weight: 700; text-align: center; margin-bottom: 4rem; color: #fff; }
         .footer__container { grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 3rem; }
@@ -53,14 +63,16 @@
         .footer__icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; color: #fff; font-size: 1.2rem; }
         .icon-linkedin { background: #0077b5; } .icon-twitter { background: #1da1f2; } .icon-whatsapp { background: #25d366; }
         .footer__link { color: #94a3b8; display: block; margin-bottom: 0.8rem; font-size: 1.1rem; }
-        .footer__link:hover { color: #fff; }
+        .footer__link:hover { color: #fff; padding-left: 5px; }
         .footer__btn { background: #3b82f6; color: #fff; padding: 0.8rem 2.5rem; border-radius: 0.5rem; display: block; text-align: center; font-weight: 700; margin-bottom: 1rem; font-size: 1.1rem; }
         .footer__copy { text-align: center; padding-top: 2rem; font-size: 0.9rem; color: #64748b; margin-top: 2rem; }
 
-        @media screen and (max-width: 992px) { .cert__container, .projects__container { grid-template-columns: repeat(2, 1fr); } }
+        @media screen and (max-width: 992px) { .cert__container, .review__container, .projects__container { grid-template-columns: repeat(2, 1fr); } }
         @media screen and (max-width: 768px) {
-            .home__container, .cert__container, .projects__container, .footer__container { grid-template-columns: 1fr; text-align: center; }
-            .home__image { order: -1; } .footer__socials { justify-content: center; }
+            .home__container, .cert__container, .review__container, .projects__container, .footer__container { grid-template-columns: 1fr; text-align: center; }
+            .home__img-wrapper { justify-content: center; order: -1; }
+            .home__img { max-width: 300px; }
+            .footer__socials { justify-content: center; }
         }
     </style>
 </head>
@@ -70,7 +82,7 @@
             <a href="#" class="nav__logo">Muhammad Zeeshan.</a>
             <div style="display: flex; gap: 1.5rem; align-items: center;">
                 <a href="https://wa.me/923019343535" target="_blank" style="color: #25d366; font-size: 1.4rem;"><i class="ri-whatsapp-line"></i></a>
-                <a href="mailto:zeeshanhaiderjhang01@gmail.com" style="color: var(--first-color); font-size: 1.4rem;"><i class="ri-mail-line"></i></a>
+                <a href="mailto:zeeshanhaiderjhang01@gmail.com" class="button" style="color: var(--first-color); font-size: 1.4rem;"><i class="ri-mail-line"></i></a>
             </div>
         </nav>
     </header>
@@ -80,42 +92,55 @@
             <div class="home__data">
                 <h1 class="home__name">Muhammad Zeeshan</h1>
                 <h2 class="home__subtitle">AI-Driven SEO Specialist | 4 Years Experience 🚀<br>Helping 50+ Websites Achieve Top Google Rankings</h2>
-                <p>Specializing in <b>Technical SEO & Advanced Workflow Automation</b>. Based in Faisalabad, Pakistan.</p>
-                <div style="margin-top: 2rem;">
+                <p class="home__description">Specializing in **Technical SEO & Advanced Workflow Automation**. Based in Faisalabad, Pakistan.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                     <a href="tel:+923019343535" class="footer__btn" style="display: inline-block; width: auto;">Call Now</a>
+                    <a href="https://wa.me/923019343535" target="_blank" class="footer__btn" style="display: inline-block; width: auto; background: #25d366;">WhatsApp Audit</a>
                 </div>
             </div>
-            <div class="home__image">
+            <div class="home__img-wrapper">
                 <img src="1766061402151 (1).jfif" alt="Zeeshan Profile" class="home__img">
             </div>
         </section>
 
         <section class="section container" id="certifications">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3.5rem; color: var(--title-color); font-weight: 800;">Verified Certifications</h2>
+            <h2 class="section__title">Verified Certifications</h2>
             <div class="cert__container grid">
-                <a href="https://verify.skilljar.com/c/in9f9xtuvfvj" target="_blank" class="cert__card"><p class="cert__title">SEO Crash Course (Brian Dean)</p><p class="cert__issuer">Semrush Academy</p></a>
-                <a href="https://skillshop.credential.net/776865d2-b9db-4c17-87cf-1ebb3275cff1" target="_blank" class="cert__card"><p class="cert__title">Google Analytics Certification</p><p class="cert__issuer">Google</p></a>
-                <a href="https://app-na2.hubspot.com/academy/achievements/mcb39jqj/en/1/zeeshan-haider/digital-marketing" target="_blank" class="cert__card"><p class="cert__title">Digital Marketing Certified</p><p class="cert__issuer">HubSpot Academy</p></a>
-                <a href="https://app-na2.hubspot.com/academy/achievements/6fdmmb6q/en/1/zeeshan-haider/seo-ii" target="_blank" class="cert__card"><p class="cert__title">HubSpot SEO II Certified</p><p class="cert__issuer">HubSpot Academy</p></a>
-                <a href="https://app-na2.hubspot.com/academy/achievements/d27hj6j8/en/1/zeeshan-haider/content-marketing" target="_blank" class="cert__card"><p class="cert__title">Content Marketing Certified</p><p class="cert__issuer">HubSpot Academy</p></a>
-                <a href="https://static.semrush.com/academy/certificates/66bc461837/muhammad-zeeshan_1.pdf" target="_blank" class="cert__card"><p class="cert__title">Technical SEO Certification</p><p class="cert__issuer">Semrush Academy</p></a>
-                <a href="https://static.semrush.com/academy/certificates/b91bb43ab3/muhammad-zeeshan_1.pdf" target="_blank" class="cert__card"><p class="cert__title">Keyword Research Course</p><p class="cert__issuer">Semrush Academy</p></a>
-                <a href="https://static.semrush.com/academy/certificates/c687665f3e/muhammad-zeeshan_1.pdf" target="_blank" class="cert__card"><p class="cert__title">Local SEO Course</p><p class="cert__issuer">Semrush Academy</p></a>
-                <a href="https://static.semrush.com/academy/certificates/6869924394/muhammad-zeeshan_1.pdf" target="_blank" class="cert__card"><p class="cert__title">Mastering YouTube Search</p><p class="cert__issuer">Semrush Academy</p></a>
-                <a href="https://static.semrush.com/academy/certificates/e254d07e14/muhammad-zeeshan_1.pdf" target="_blank" class="cert__card"><p class="cert__title">Advanced SEO Strategies</p><p class="cert__issuer">Semrush Academy</p></a>
-                <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/details/certifications/" target="_blank" class="cert__card"><p class="cert__title">LinkedIn Creator Design</p><p class="cert__issuer">LinkedIn</p></a>
-                <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/details/certifications/" target="_blank" class="cert__card"><p class="cert__title">Google My Business</p><p class="cert__issuer">Google</p></a>
+                <a href="https://verify.skilljar.com/c/in9f9xtuvfvj" target="_blank" class="cert__card"><b>SEO Crash Course</b><br><small>Semrush Academy</small></a>
+                <a href="https://skillshop.credential.net/776865d2-b9db-4c17-87cf-1ebb3275cff1" target="_blank" class="cert__card"><b>Google Analytics</b><br><small>Google Academy</small></a>
+                <a href="https://app-na2.hubspot.com/academy/achievements/mcb39jqj" target="_blank" class="cert__card"><b>Digital Marketing</b><br><small>HubSpot Academy</small></a>
+                <a href="https://app-na2.hubspot.com/academy/achievements/6fdmmb6q" target="_blank" class="cert__card"><b>SEO II Certified</b><br><small>HubSpot Academy</small></a>
+                <a href="https://static.semrush.com/academy/certificates/66bc461837" target="_blank" class="cert__card"><b>Technical SEO</b><br><small>Semrush Academy</small></a>
+                <a href="https://static.semrush.com/academy/certificates/b91bb43ab3" target="_blank" class="cert__card"><b>Keyword Research</b><br><small>Semrush Academy</small></a>
+                <a href="https://static.semrush.com/academy/certificates/c687665f3e" target="_blank" class="cert__card"><b>Local SEO Course</b><br><small>Semrush Academy</small></a>
+                <a href="https://static.semrush.com/academy/certificates/6869924394" target="_blank" class="cert__card"><b>YouTube Search</b><br><small>Semrush Academy</small></a>
+                <a href="https://app-na2.hubspot.com/academy/achievements/d27hj6j8" target="_blank" class="cert__card"><b>Content Marketing</b><br><small>HubSpot Academy</small></a>
+                <a href="https://static.semrush.com/academy/certificates/e254d07e14" target="_blank" class="cert__card"><b>Advanced SEO</b><br><small>Semrush Academy</small></a>
+                <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/details/certifications/" target="_blank" class="cert__card"><b>Creator Design</b><br><small>LinkedIn</small></a>
+                <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/details/certifications/" target="_blank" class="cert__card"><b>GMB Verified</b><br><small>Google Business</small></a>
             </div>
         </section>
 
         <section class="section container" id="projects">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3.5rem; color: var(--title-color); font-weight: 800;">Featured Projects</h2>
+            <h2 class="section__title">Featured Projects</h2>
             <div class="projects__container grid">
-                <article class="projects__card"><h3>BestSEOServices.co</h3><p>Comprehensive SEO audits and ranking solutions.</p><a href="https://www.bestseoservices.co/" target="_blank" style="color: var(--first-color); font-weight: 700;">Visit Site →</a></article>
-                <article class="projects__card"><h3>MostPopularAITools.com</h3><p>SEO lifecycle management for a global AI directory.</p><a href="https://mostpopularaitools.com" target="_blank" style="color: var(--first-color); font-weight: 700;">Visit Site →</a></article>
-                <article class="projects__card"><h3>Quran Coaching</h3><p>Growth lead for international search outreach.</p><a href="https://www.qurancoaching.com/" target="_blank" style="color: var(--first-color); font-weight: 700;">Visit Site →</a></article>
-                <article class="projects__card"><h3>Ferro.pk</h3><p>E-commerce SEO strategy and conversion optimization.</p><a href="https://ferro.pk/" target="_blank" style="color: var(--first-color); font-weight: 700;">Visit Site →</a></article>
-                <article class="projects__card"><h3>Door2Door Repair</h3><p>Local SEO domination for mobile repair services.</p><a href="https://door2doormobilerepair.com/" target="_blank" style="color: var(--first-color); font-weight: 700;">Visit Site →</a></article>
+                <article class="projects__card"><h3>BestSEOServices.co</h3><p>Comprehensive SEO audits and ranking solutions for global businesses.</p><a href="https://www.bestseoservices.co/" target="_blank" style="color: var(--first-color); font-weight: 700; display: block; margin-top: 1rem;">Visit Site →</a></article>
+                <article class="projects__card"><h3>MostPopularAITools.com</h3><p>Automated SEO lifecycle management for a global directory.</p><a href="https://mostpopularaitools.com" target="_blank" style="color: var(--first-color); font-weight: 700; display: block; margin-top: 1rem;">Visit Site →</a></article>
+                <article class="projects__card"><h3>Quran Coaching</h3><p>Organic search lead for educational platform expansion.</p><a href="https://www.qurancoaching.com/" target="_blank" style="color: var(--first-color); font-weight: 700; display: block; margin-top: 1rem;">Visit Site →</a></article>
+                <article class="projects__card"><h3>Ferro.pk</h3><p>E-commerce SEO strategy and conversion optimization.</p><a href="https://ferro.pk/" target="_blank" style="color: var(--first-color); font-weight: 700; display: block; margin-top: 1rem;">Visit Site →</a></article>
+                <article class="projects__card"><h3>Door2Door Repair</h3><p>Local SEO domination for service business visibility.</p><a href="https://door2doormobilerepair.com/" target="_blank" style="color: var(--first-color); font-weight: 700; display: block; margin-top: 1rem;">Visit Site →</a></article>
+            </div>
+        </section>
+
+        <section class="section container" id="reviews">
+            <h2 class="section__title">Client Reviews</h2>
+            <div class="review__container grid">
+                <div class="review__card"><div class="review__stars">★★★★★</div><p class="review__text">"Our organic traffic grew by 400% in six months."</p><span class="review__author">- Tech Partner</span></div>
+                <div class="review__card"><div class="review__stars">★★★★★</div><p class="review__text">"The automation workflows saved us 20+ hours weekly."</p><span class="review__author">- Global Brand</span></div>
+                <div class="review__card"><div class="review__stars">★★★★★</div><p class="review__text">"Professional, fast, and highly technical services."</p><span class="review__author">- Service Lead</span></div>
+                <div class="review__card"><div class="review__stars">★★★★★</div><p class="review__text">"Best ROI we've ever seen from an SEO expert."</p><span class="review__author">- E-com Manager</span></div>
+                <div class="review__card"><div class="review__stars">★★★★★</div><p class="review__text">"Honest advice and exceptional results every time."</p><span class="review__author">- Project Owner</span></div>
+                <div class="review__card"><div class="review__stars">★★★★★</div><p class="review__text">"A true expert in AI and search engine logic."</p><span class="review__author">- Marketing Lead</span></div>
             </div>
         </section>
     </main>
@@ -135,12 +160,13 @@
                     </div>
                 </div>
                 <div>
-                    <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem;">Explore</h3>
+                    <h3 class="footer__links-title">Explore</h3>
                     <a href="#projects" class="footer__link">Projects</a>
                     <a href="#certifications" class="footer__link">Certifications</a>
+                    <a href="#reviews" class="footer__link">Client Reviews</a>
                 </div>
                 <div>
-                    <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem;">Hire Me</h3>
+                    <h3 class="footer__links-title">Hire Me</h3>
                     <a href="tel:+923019343535" class="footer__btn">Call Now</a>
                     <a href="mailto:zeeshanhaiderjhang01@gmail.com" class="footer__btn" style="background: transparent; border: 1px solid #3b82f6;">Email Me</a>
                 </div>
