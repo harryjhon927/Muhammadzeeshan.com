@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Zeeshan | AI-Driven SEO Specialist</title>
+    <title>Muhammad Zeeshan | AI-Driven SEO & Automation Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css">
     <style>
         :root { 
@@ -19,19 +19,19 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
         .grid { display: grid; gap: 1.5rem; }
         
-        /* Navigation Header */
+        /* Navigation */
         .header { width: 100%; background: #fff; position: fixed; top: 0; left: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .nav { height: 4.5rem; display: flex; justify-content: space-between; align-items: center; }
         .nav__logo { font-weight: 800; color: var(--first-color); font-size: 1.5rem; }
 
-        /* FIXED HERO SECTION: Image level with Heading */
+        /* HERO SECTION: Image Aligned with Heading */
         .home__container { 
             padding-top: 10rem; 
-            display: flex; /* Flexbox alignment fix */
+            display: flex; 
             justify-content: space-between; 
-            align-items: center; /* Yeh line image aur bio ko barabar rakhti hai */
+            align-items: center; 
             gap: 3rem; 
-            flex-wrap: wrap; /* Mobile par stack hone ke liye */
+            flex-wrap: wrap; 
         }
         .home__data { flex: 1; min-width: 300px; }
         .home__name { font-size: 3.5rem; color: var(--title-color); margin-bottom: 0.5rem; font-weight: 800; }
@@ -46,28 +46,32 @@
             border-radius: 2.5rem; 
             box-shadow: 0 30px 60px rgba(0,0,0,0.12); 
             border: 8px solid #fff;
-            /* Image ko Heading "Muhammad Zeeshan" ke level tak lane ke liye */
-            margin-top: -2rem; 
+            margin-top: -4rem; /* Image pushed up to level with heading */
         }
 
         .section { padding: 6rem 0 2rem; }
         .section__title { text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 4rem; color: var(--title-color); }
 
-        /* Certifications & Projects (Standard Grid) */
+        /* Grids */
         .grid-3 { grid-template-columns: repeat(3, 1fr); }
         .grid-2 { grid-template-columns: repeat(2, 1fr); }
-        .card { background: white; padding: 1.5rem; border-radius: 1rem; border: 1px solid #eef2f6; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .card { background: white; padding: 1.5rem; border-radius: 1rem; border: 1px solid #eef2f6; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: .3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--first-color); }
 
-        /* Dark Footer Style */
+        /* Reviews */
+        .review__stars { color: #facc15; margin-bottom: 0.5rem; }
+        .review__text { font-size: 0.95rem; font-style: italic; }
+
+        /* Footer */
         .footer { background-color: var(--footer-bg); color: #fff; padding: 5rem 0 2rem; border-radius: 4rem 4rem 0 0; margin-top: 5rem; }
-        .footer__container { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; }
+        .footer__container { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 3rem; }
         .footer__link { color: #94a3b8; display: block; margin-bottom: 0.8rem; }
         .footer__btn { background: #3b82f6; color: #fff; padding: 0.8rem 2.5rem; border-radius: 0.5rem; display: block; text-align: center; font-weight: 700; margin-bottom: 1rem; }
 
         @media screen and (max-width: 768px) {
-            .home__container { flex-direction: column-reverse; text-align: center; padding-top: 8rem; }
-            .home__img-wrapper { justify-content: center; }
-            .footer__container { grid-template-columns: 1fr; text-align: center; }
+            .home__container { flex-direction: column-reverse; text-align: center; }
+            .grid-3, .grid-2, .footer__container { grid-template-columns: 1fr; }
+            .home__img { margin-top: 0; }
         }
     </style>
 </head>
@@ -96,8 +100,17 @@
                 <div class="card"><b>SEO Crash Course</b><br><small>Semrush Academy</small></div>
                 <div class="card"><b>Google Analytics</b><br><small>Google Academy</small></div>
                 <div class="card"><b>Digital Marketing</b><br><small>HubSpot Academy</small></div>
-                </div>
-            <div style="text-align: center; margin-top: 2rem;">
+                <div class="card"><b>SEO II Certified</b><br><small>HubSpot Academy</small></div>
+                <div class="card"><b>Technical SEO</b><br><small>Semrush Academy</small></div>
+                <div class="card"><b>Keyword Research</b><br><small>Semrush Academy</small></div>
+                <div class="card"><b>Local SEO Course</b><br><small>Semrush Academy</small></div>
+                <div class="card"><b>YouTube Search</b><br><small>Semrush Academy</small></div>
+                <div class="card"><b>Content Marketing</b><br><small>HubSpot Academy</small></div>
+                <div class="card"><b>Advanced SEO</b><br><small>Semrush Academy</small></div>
+                <div class="card"><b>Creator Design</b><br><small>LinkedIn</small></div>
+                <div class="card"><b>GMB Verified</b><br><small>Google Business</small></div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
                 <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/details/certifications/" target="_blank" class="footer__btn" style="display:inline-block; width:auto;">View All on LinkedIn →</a>
             </div>
         </section>
@@ -105,8 +118,23 @@
         <section class="section" id="projects">
             <h2 class="section__title">Featured Projects</h2>
             <div class="grid grid-2">
-                <div class="card"><h3>BestSEOServices.co</h3><p>Complete SEO lifecycle and ranking strategy.</p><a href="https://www.bestseoservices.co/" target="_blank">Visit Site →</a></div>
-                <div class="card"><h3>MostPopularAITools.com</h3><p>SEO automation for global AI directory.</p><a href="https://mostpopularaitools.com" target="_blank">Visit Site →</a></div>
+                <div class="card"><h3>BestSEOServices.co</h3><p>Comprehensive SEO audits and strategic ranking solutions.</p><a href="https://www.bestseoservices.co/" target="_blank">Visit Site →</a></div>
+                <div class="card"><h3>MostPopularAITools.com</h3><p>Automated SEO lifecycle for a global AI directory.</p><a href="https://mostpopularaitools.com" target="_blank">Visit Site →</a></div>
+                <div class="card"><h3>Quran Coaching</h3><p>Organic growth lead for educational expansion.</p><a href="https://www.qurancoaching.com/" target="_blank">Visit Site →</a></div>
+                <div class="card"><h3>Ferro.pk</h3><p>E-commerce SEO strategy and product ranking.</p><a href="https://ferro.pk/" target="_blank">Visit Site →</a></div>
+                <div class="card"><h3>Door2Door Repair</h3><p>Local SEO for mobile repair service visibility.</p><a href="https://door2doormobilerepair.com/" target="_blank">Visit Site →</a></div>
+            </div>
+        </section>
+
+        <section class="section" id="reviews">
+            <h2 class="section__title">Client Reviews</h2>
+            <div class="grid grid-3">
+                <div class="card"><div class="review__stars">★★★★★</div><p class="review__text">"Traffic grew 400% in 6 months."</p><b>- Tech Partner</b></div>
+                <div class="review__card card"><div class="review__stars">★★★★★</div><p class="review__text">"Automation saved us 20+ hours weekly."</p><b>- Global Brand</b></div>
+                <div class="review__card card"><div class="review__stars">★★★★★</div><p class="review__text">"Ranked us #1 for local keywords."</p><b>- Service Lead</b></div>
+                <div class="review__card card"><div class="review__stars">★★★★★</div><p class="review__text">"Best technical SEO specialist."</p><b>- E-com Manager</b></div>
+                <div class="review__card card"><div class="review__stars">★★★★★</div><p class="review__text">"Honest advice and real ROI delivery."</p><b>- Project Owner</b></div>
+                <div class="review__card card"><div class="review__stars">★★★★★</div><p class="review__text">"Expert in search algorithms."</p><b>- Marketing Lead</b></div>
             </div>
         </section>
     </main>
@@ -118,6 +146,7 @@
                 <p>Faisalabad, Pakistan</p>
                 <div style="display:flex; gap:10px; margin-top:15px;">
                     <a href="https://wa.me/923019343535" target="_blank" style="color:#25d366; font-size:1.5rem;"><i class="ri-whatsapp-line"></i></a>
+                    <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" style="color:#0077b5; font-size:1.5rem;"><i class="ri-linkedin-box-fill"></i></a>
                 </div>
             </div>
             <div>
@@ -128,6 +157,7 @@
             <div>
                 <h3>Hire Me</h3>
                 <a href="tel:+923019343535" class="footer__btn">Call Now</a>
+                <a href="mailto:zeeshanhaiderjhang01@gmail.com" class="footer__btn" style="background:transparent; border:1px solid #3b82f6;">Email Me</a>
             </div>
         </div>
         <p style="text-align: center; margin-top: 3rem; color: #64748b;">© 2026 Developed By Muhammad Zeeshan</p>
