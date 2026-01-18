@@ -8,40 +8,89 @@
     
     <style>
         /* Modern Portfolio Styling */
-        :root { --first-color: #1e40af; --title-color: #0f172a; --text-color: #475569; --body-color: #f8fafc; --container-color: #ffffff; }
+        :root { 
+            --first-color: #1e40af; 
+            --title-color: #0f172a; 
+            --text-color: #475569; 
+            --body-color: #f8fafc; 
+            --container-color: #ffffff; 
+        }
         * { box-sizing: border-box; padding: 0; margin: 0; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--body-color); color: var(--text-color); line-height: 1.6; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--body-color); 
+            color: var(--text-color); 
+            line-height: 1.6; 
+        }
         a { text-decoration: none; }
         .container { max-width: 1024px; margin: 0 auto; padding: 0 1.5rem; }
         .grid { display: grid; gap: 1.5rem; }
         .section { padding: 5rem 0 2rem; }
         
         /* Header */
-        .header { width: 100%; background-color: var(--container-color); position: fixed; top: 0; left: 0; z-index: 100; shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .header { 
+            width: 100%; 
+            background-color: var(--container-color); 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            z-index: 100; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+        }
         .nav { height: 4.5rem; display: flex; justify-content: space-between; align-items: center; }
         .nav__logo { font-weight: 800; color: var(--first-color); display: flex; align-items: center; gap: .5rem; }
-        .nav__logo-circle { width: 32px; height: 32px; background-color: var(--first-color); color: #fff; display: grid; place-items: center; border-radius: 50%; }
+        .nav__logo-circle { 
+            width: 32px; height: 32px; 
+            background-color: var(--first-color); 
+            color: #fff; display: grid; 
+            place-items: center; border-radius: 50%; 
+        }
 
         /* Home Section */
-        .home__container { padding-top: 2rem; grid-template-columns: repeat(2, 1fr); align-items: center; }
-        .home__name { font-size: 3.5rem; color: var(--title-color); margin-bottom: 1rem; }
-        .home__img { width: 100%; max-width: 350px; border-radius: 2rem; border: 8px solid #fff; shadow: 0 20px 25px rgba(0,0,0,0.1); }
+        .home__container { padding-top: 3rem; grid-template-columns: repeat(2, 1fr); align-items: center; }
+        .home__name { font-size: 3rem; color: var(--title-color); margin-bottom: 1rem; line-height: 1.2; }
+        .home__img { 
+            width: 100%; 
+            max-width: 340px; 
+            border-radius: 2rem; 
+            border: 8px solid #fff; 
+            box-shadow: 0 20px 25px rgba(0,0,0,0.1); 
+        }
         .home__description b { color: var(--first-color); }
         
         /* Projects Section */
         .projects__container { grid-template-columns: repeat(2, 1fr); }
-        .projects__card { background-color: var(--container-color); padding: 1.5rem; border-radius: 1.5rem; border: 1px solid #e2e8f0; transition: .4s; }
-        .projects__card:hover { transform: translateY(-10px); border-color: var(--first-color); }
-        .projects__title { font-size: 1.25rem; color: var(--title-color); margin-bottom: .5rem; }
-        .gsc-img { width: 100%; border-radius: 1rem; margin-bottom: 1rem; border: 1px solid #f1f5f9; }
+        .projects__card { 
+            background-color: var(--container-color); 
+            padding: 2rem; 
+            border-radius: 1.5rem; 
+            border: 1px solid #e2e8f0; 
+            transition: .4s; 
+        }
+        .projects__card:hover { 
+            transform: translateY(-10px); 
+            border-color: var(--first-color); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
+        }
+        .projects__title { font-size: 1.25rem; color: var(--title-color); margin-bottom: .75rem; }
+        .projects__link { color: var(--first-color); font-weight: 600; display: inline-flex; align-items: center; gap: .25rem; margin-top: 1rem; }
         
-        /* Contact Section */
-        .contact { background-color: var(--title-color); color: #fff; padding: 4rem 0; text-align: center; border-radius: 3rem 3rem 0 0; }
-        .button { background-color: var(--first-color); color: #fff; padding: 1rem 2rem; border-radius: .75rem; display: inline-block; font-weight: 700; margin-top: 2rem; }
-        
+        /* Footer/Contact Section */
+        .contact { background-color: var(--title-color); color: #fff; padding: 4rem 0; text-align: center; border-radius: 3rem 3rem 0 0; margin-top: 4rem; }
+        .button { 
+            background-color: var(--first-color); 
+            color: #fff; padding: 1rem 2rem; 
+            border-radius: .75rem; 
+            display: inline-block; 
+            font-weight: 700; 
+            transition: .3s;
+        }
+        .button:hover { opacity: 0.9; }
+
         @media screen and (max-width: 768px) {
             .home__container, .projects__container { grid-template-columns: 1fr; text-align: center; }
-            .home__name { font-size: 2.5rem; }
+            .home__name { font-size: 2.25rem; }
+            .home__image { order: -1; margin-bottom: 2rem; }
         }
     </style>
 </head>
@@ -52,7 +101,7 @@
                 <span class="nav__logo-circle">MZ</span>
                 <span class="nav__logo-name">Muhammad Zeeshan.</span>
             </a>
-            <a href="mailto:zeshanfaisal308@gmail.com" class="button" style="margin: 0; padding: .5rem 1rem;">Email Me</a>
+            <a href="mailto:zeshanfaisal308@gmail.com" class="button" style="padding: .6rem 1.2rem; margin: 0; font-size: .9rem;">Free Audit</a>
         </nav>
     </header>
 
@@ -60,58 +109,77 @@
         <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__data">
-                    <h1 class="home__name">AI-Driven SEO Expert</h1>
+                    <h1 class="home__name">Rank #1 with <br>AI-Driven SEO</h1>
                     <p class="home__description">
-                        I am <b>Muhammad Zeeshan</b>, based in Faisalabad. With 4+ years of experience, I use technical SEO and Data Analytics to rank brands #1 on Google.
+                        I am <b>Muhammad Zeeshan</b>, a Professional SEO Specialist based in Faisalabad. 
+                        With 4+ years of experience, I specialize in Technical SEO and Data Analytics to drive massive organic growth.
                     </p>
-                    <a href="#projects" class="button">View Case Studies</a>
+                    <div style="margin-top: 2.5rem; display: flex; gap: 1.5rem; justify-content: center; align-items: center;">
+                        <a href="#projects" class="button">View Projects</a>
+                        <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" style="font-size: 1.5rem; color: var(--first-color);"><i class="ri-linkedin-box-line"></i></a>
+                    </div>
                 </div>
-                <div class="home__image">
+                <div class="home__image text-center">
                     <img src="1766061402151 (1).jfif" alt="Zeeshan" class="home__img">
                 </div>
             </div>
         </section>
 
-        <section class="section container">
-            <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--title-color);">Organic Growth Data</h2>
-            <div class="projects__card">
-                <img src="gsc.PNG" alt="GSC Data" class="gsc-img">
-                <p>Real-time data from <b>Google Search Console</b> showing consistent organic growth and 3.08M impressions.</p>
-            </div>
-        </section>
-
         <section class="projects section container" id="projects">
-            <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--title-color);">Featured Projects</h2>
+            <h2 style="font-size: 2rem; margin-bottom: 3rem; color: var(--title-color); text-align: center;">Featured Case Studies</h2>
             <div class="projects__container grid">
                 <article class="projects__card">
                     <h3 class="projects__title">MostPopularAITools.com</h3>
-                    <p>Complete SEO management and metadata strategy for an AI directory.</p>
+                    <p>Managed complete SEO lifecycle, metadata strategy, and authority outreach for an AI directory platform.</p>
+                    <a href="https://mostpopularaitools.com" target="_blank" class="projects__link">Visit Website <i class="ri-arrow-right-up-line"></i></a>
                 </article>
 
                 <article class="projects__card">
                     <h3 class="projects__title">Quran Coaching</h3>
-                    <p>International SEO growth lead for a global educational platform.</p>
+                    <p>International SEO growth lead for a global educational platform, optimizing for global search visibility.</p>
+                    <a href="https://www.qurancoaching.com/" target="_blank" class="projects__link">Visit Website <i class="ri-arrow-right-up-line"></i></a>
                 </article>
 
                 <article class="projects__card">
                     <h3 class="projects__title">Ferro.pk</h3>
-                    <p>E-commerce SEO and product ranking optimization.</p>
+                    <p>E-commerce SEO strategy and product-page optimization to increase organic traffic and conversions.</p>
+                    <a href="https://ferro.pk/" target="_blank" class="projects__link">Visit Website <i class="ri-arrow-right-up-line"></i></a>
                 </article>
 
                 <article class="projects__card">
                     <h3 class="projects__title">Door2Door Repair</h3>
-                    <p>Local SEO domination for repair services.</p>
+                    <p>Local SEO domination for a mobile repair service, focusing on geo-targeted ranking and customer leads.</p>
+                    <a href="https://door2doormobilerepair.com/" target="_blank" class="projects__link">Visit Website <i class="ri-arrow-right-up-line"></i></a>
                 </article>
             </div>
         </section>
 
         <section class="contact" id="contact">
             <div class="container">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Rank?</h2>
-                <p>Based in Faisalabad, Pakistan. Available for freelance projects.</p>
-                <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" class="button">Contact on LinkedIn</a>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Grow Your Traffic?</h2>
+                <p style="opacity: 0.8; margin-bottom: 2rem;">Available for SEO Audits and Data-Driven Consulting.</p>
+                <a href="mailto:zeshanfaisal308@gmail.com" class="button" style="background-color: #fff; color: var(--first-color);">Get My Free Audit</a>
+                <div style="margin-top: 3rem; opacity: 0.6; font-size: .9rem;">
+                    Location: Faisalabad, Pakistan
+                </div>
             </div>
         </section>
     </main>
+
+    <footer style="text-align: center; padding: 2rem 0; font-size: .8rem; color: var(--text-color);">
+        © 2026 Developed By Muhammad Zeeshan.
+    </footer>
+
+    <script>
+        /* Smooth Scroll for Navbar */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
