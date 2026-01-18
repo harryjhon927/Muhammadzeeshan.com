@@ -20,12 +20,12 @@
         .grid { display: grid; gap: 1.5rem; }
         .section { padding: 6rem 0 2rem; }
         
-        /* Header Navigation */
+        /* Navigation Header */
         .header { width: 100%; background: #fff; position: fixed; top: 0; left: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .nav { height: 4.5rem; display: flex; justify-content: space-between; align-items: center; }
         .nav__logo { font-weight: 800; color: var(--first-color); font-size: 1.5rem; }
 
-        /* HERO SECTION - IMAGE CENTERED WITH BIO */
+        /* UNIQUE HERO SECTION - IMAGE ALIGNED WITH HEADING */
         .home__container { padding-top: 9rem; grid-template-columns: 1.2fr 0.8fr; align-items: center; gap: 3rem; }
         .home__data { align-self: center; }
         .home__name { font-size: 3.5rem; color: var(--title-color); margin-bottom: 0.5rem; font-weight: 800; }
@@ -37,37 +37,40 @@
 
         .section__title { text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 4rem; color: var(--title-color); }
 
-        /* Certifications Grid (No Links on Cards) */
+        /* Certifications Grid (12 Items) */
         .cert__container { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 3rem; }
-        .cert__card { background: white; padding: 1.5rem; border-radius: 1rem; border-left: 4px solid var(--first-color); box-shadow: 0 4px 15px rgba(0,0,0,0.03); cursor: default; }
+        .cert__card { background: white; padding: 1.5rem; border-radius: 1rem; border-left: 4px solid var(--first-color); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
         .cert__title { font-size: .85rem; font-weight: 700; color: var(--title-color); margin-bottom: .25rem; }
-        .cert__issuer { font-size: .75rem; color: var(--text-color); }
 
-        /* Projects Grid */
+        /* Projects Grid (5 Items) */
         .projects__container { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
         .projects__card { background: white; padding: 2.5rem; border-radius: 1.5rem; border: 1px solid #eef2f6; transition: .3s; }
         .projects__card:hover { border-color: var(--first-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 
-        /* Reviews Grid */
+        /* Client Reviews (6 Items) */
         .review__container { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         .review__card { background: white; padding: 2rem; border-radius: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); text-align: center; border: 1px solid #f1f5f9; }
         .review__stars { color: #facc15; margin-bottom: 1rem; }
+        .review__text { font-size: 0.95rem; font-style: italic; min-height: 80px; }
 
         /* PREMIUM DARK FOOTER */
         .footer { background-color: var(--footer-bg); color: #fff; padding: 5rem 0 2rem; border-radius: 4rem 4rem 0 0; margin-top: 5rem; }
         .footer__main-title { font-size: 2.2rem; font-weight: 700; text-align: center; margin-bottom: 4rem; }
-        .footer__container { grid-template-columns: 1.5fr 1fr 1.5fr; gap: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 3rem; }
+        .footer__container { grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 3rem; }
         .footer__subtitle { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
         .footer__text { color: #94a3b8; font-size: 1rem; margin-bottom: 0.5rem; }
         .footer__socials { display: flex; gap: 1rem; margin-top: 1.5rem; }
         .footer__icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; color: #fff; font-size: 1.2rem; }
         .icon-linkedin { background: #0077b5; } .icon-twitter { background: #1da1f2; } .icon-whatsapp { background: #25d366; }
+        .footer__link { color: #94a3b8; display: block; margin-bottom: 0.8rem; font-size: 1.1rem; }
+        .footer__link:hover { color: #fff; padding-left: 5px; }
         .footer__btn { background: #3b82f6; color: #fff; padding: 0.8rem 2.5rem; border-radius: 0.5rem; display: block; text-align: center; font-weight: 700; margin-bottom: 1rem; }
 
+        /* Responsive Mobile Layout */
         @media screen and (max-width: 992px) { .cert__container, .review__container, .projects__container { grid-template-columns: repeat(2, 1fr); } }
         @media screen and (max-width: 768px) {
             .home__container, .cert__container, .review__container, .projects__container, .footer__container { grid-template-columns: 1fr; text-align: center; }
-            .home__img-wrapper { justify-content: center; order: -1; padding-top: 2rem; }
+            .home__img-wrapper { justify-content: center; order: -1; padding-bottom: 2rem; }
             .footer__socials { justify-content: center; }
         }
     </style>
@@ -88,7 +91,7 @@
             <div class="home__data">
                 <h1 class="home__name">Muhammad Zeeshan</h1>
                 <h2 class="home__subtitle">AI-Driven SEO Specialist | 4 Years Experience<br>Helping 50+ Websites Achieve Top Google Rankings</h2>
-                <p class="home__description">Specializing in <b>Technical SEO & Advanced Workflow Automation</b>. Based in Faisalabad, Pakistan.</p>
+                <p class="home__description">Specializing in Technical SEO & Advanced Workflow Automation. Based in Faisalabad, Pakistan.</p>
                 <div class="home__buttons">
                     <a href="tel:+923019343535" class="footer__btn" style="display: inline-block; width: auto;">Call Now</a>
                     <a href="https://wa.me/923019343535" target="_blank" class="footer__btn" style="display: inline-block; width: auto; background: #25d366; border: none;">WhatsApp Audit</a>
@@ -157,12 +160,14 @@
                         <a href="https://x.com/Mzeeshan4554" target="_blank" class="footer__icon icon-twitter"><i class="ri-twitter-x-fill"></i></a>
                         <a href="https://wa.me/923019343535" target="_blank" class="footer__icon icon-whatsapp"><i class="ri-whatsapp-line"></i></a>
                     </div>
+                </div>
                 <div>
-    <h3 class="footer__subtitle">Explore</h3>
-    <a href="#projects" class="footer__link">Projects</a>
-    <a href="#certifications" class="footer__link">Certifications</a>
-    <a href="#reviews" class="footer__link">Reviews</a>
-</div>
+                    <h3 class="footer__subtitle">Explore</h3>
+                    <a href="#projects" class="footer__link">Projects</a>
+                    <a href="#certifications" class="footer__link">Certifications</a>
+                    <a href="#reviews" class="footer__link">Reviews</a>
+                </div>
+                <div>
                     <h3 class="footer__subtitle">Hire Me</h3>
                     <a href="tel:+923019343535" class="footer__btn">Call Now</a>
                     <a href="mailto:zeeshanhaiderjhang01@gmail.com" class="footer__btn" style="background: transparent; border: 1px solid #3b82f6;">Email Me</a>
