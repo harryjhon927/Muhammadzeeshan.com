@@ -3,46 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Zeeshan | Software Engineer & SEO Specialist</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Muhammad Zeeshan | AI-Driven SEO Expert</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --primary-color: #2563eb; --secondary-color: #475569; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; }
+        .btn-custom { border-radius: 8px; font-weight: 600; transition: 0.3s; padding: 12px 30px; }
+        .hero-section { padding: 120px 0; background: radial-gradient(circle at top right, #f8fafc, #ffffff); }
+        .card { border: 1px solid #e2e8f0; border-radius: 16px; transition: 0.3s; background: #fff; }
+        .card:hover { border-color: #2563eb; transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .project-card { border-radius: 20px; overflow: hidden; margin-bottom: 40px; border: 1px solid #f1f5f9; }
+        .social-icons a { font-size: 1.6rem; color: #64748b; margin-right: 25px; transition: 0.3s; text-decoration: none; }
+        .social-icons a:hover { color: #2563eb; }
+        .stat-box h2 { color: #2563eb; font-weight: 800; }
+        footer { background: #f8fafc; padding: 60px 0; border-top: 1px solid #e2e8f0; }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body>
 
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold text-blue-800">M. Zeeshan</span>
-            <div class="space-x-4 flex">
-                <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" class="text-slate-600 hover:text-blue-700"><i class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/Mzeeshan4554" target="_blank" class="text-slate-600 hover:text-blue-400"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.facebook.com/szeeshan.szeeshan.92/" target="_blank" class="text-slate-600 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+    <header class="container py-4">
+        <div class="row align-items-center">
+            <div class="col-6">
+                <h3 class="fw-bold mb-0">MZ<span class="text-primary">.</span></h3>
             </div>
-        </div>
-    </nav>
-
-    <header class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-24 px-6 text-center">
-        <h1 class="text-5xl font-extrabold mb-4">Muhammad Zeeshan</h1>
-        <p class="text-2xl font-light mb-2">Lecturer in Software Engineering @ UMT Faisalabad</p>
-        <p class="text-xl font-medium mb-6 text-blue-200">AI-Driven SEO Specialist | 4 Years Experience 🚀</p>
-        <p class="max-w-2xl mx-auto text-lg opacity-90 leading-relaxed">
-            Helping 50+ websites & global brands achieve top Google rankings while educating the next generation of Software Engineers.
-        </p>
-        
-        <div class="mt-10 flex justify-center gap-6">
-            <a href="https://medium.com/@zeeshanhaiderjhang01" target="_blank" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition"><i class="fab fa-medium fa-xl"></i></a>
-            <a href="https://www.researchgate.net/profile/Muhammad-Zeeshan-233?ev=hdr_xprf" target="_blank" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition"><i class="fas fa-microscope fa-xl"></i></a>
-            <a href="mailto:zeeshan@example.com" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition"><i class="fas fa-envelope fa-xl"></i></a>
+            <div class="col-6 text-end">
+                <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank" class="btn btn-primary btn-custom">Let's Talk</a>
+            </div>
         </div>
     </header>
 
-    <section id="projects" class="py-20 container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-16 underline decoration-blue-500 decoration-4">Strategic Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <span class="badge bg-primary mb-3 px-3 py-2">SEO Expert</span>
+                    <h1 class="display-3 fw-bold mb-4">I'm Muhammad <span class="text-primary">Zeeshan</span></h1>
+                    <p class="fs-4 text-muted mb-5 leading-relaxed">
+                        <b>AI-Driven SEO Specialist</b> with 4+ years of experience. 
+                        Helping 50+ websites achieve top Google rankings through data-driven technical optimization.
+                    </p>
+                    <div class="social-icons mb-5">
+                        <a href="https://www.linkedin.com/in/muhamamdzeeshanofficial/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/Mzeeshan4554" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/szeeshan.szeeshan.92/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://medium.com/@zeeshanhaiderjhang01" target="_blank"><i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-5 d-none d-md-block">
+                    <div class="p-5 bg-light rounded-circle shadow-sm text-center">
+                        <i class="fas fa-chart-line fa-10x text-primary opacity-25"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-md-4 stat-box">
+                    <h2 class="display-5">4+</h2>
+                    <p class="text-secondary fw-bold">Years Experience</p>
+                </div>
+                <div class="col-md-4 stat-box">
+                    <h2 class="display-5">50+</h2>
+                    <p class="text-secondary fw-bold">Websites Ranked</p>
+                </div>
+                <div class="col-md-4 stat-box">
+                    <h2 class="display-5">Top</h2>
+                    <p class="text-secondary fw-bold">Google Results</p>
+                </div>
+            </div>
             
-            <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition overflow-hidden">
-                <div class="p-8 border-t-4 border-green-600">
-                    <h3 class="text-2xl font-bold mb-3">Quran Coaching</h3>
-                    <p class="text-slate-600 mb-6 italic">Educational Platform</p>
-                    <p class="text-slate-600 mb-6">Online platform for Quranic education. Leading digital strategy and organic growth to reach global students.</p>
-                    <a href="https://www.qurancoaching.com/" target="_blank" class="text-blue-700 font-bold flex items-center gap-2 hover:underline">
-                        Visit Site <i class="fas fa-external-link
+            <div class="row g-4 mt-5">
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 shadow-sm">
+                        <h4 class="fw-bold mb-3">Technical SEO</h4>
+                        <p class="text-muted">Crawlability, indexability, and site architecture optimization for global brands.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 shadow-sm">
+                        <h4 class="fw-bold mb-3">AI-Driven Strategy</h4>
+                        <p class="text-muted">Using LLMs and AI tools for metadata, content clusters, and keyword research.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 shadow-sm">
+                        <h4 class="fw-bold mb-3">Directory SEO</h4>
+                        <p class="text-muted">Expertise in ranking high-traffic directories and complex website structures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold mb-5 text-center">Case Studies</h2>
+            
+            <div class="row project-card shadow-sm bg-white g-0">
+                <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+                    <h3 class="fw-bold">MostPopularAITools.com</h3>
+                    <p class="text-muted my-3">Managed full organic search lifecycle: Meta titles, descriptions, schema markup, and high-authority outreach.</p>
+                    <a href="https://mostpopularaitools.com" target="_blank" class="text-primary fw-bold text-decoration-none">View Website <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+                <div class="col-md-6 bg-primary opacity-75 d-flex align-items-center justify-content-center text-white">
+                    <i class="fas fa-robot fa-5x"></i>
+                </div>
+            </div>
+
+            <div class="row project-card shadow-sm bg-white g-0">
+                <div class="col-md-6 order-md-2 p-5 d-flex flex-column justify-content-center">
+                    <h3 class="fw-bold">Quran Coaching</h3>
+                    <p class="text-muted my-3">Leading the digital marketing and SEO strategy for this educational platform to connect with global learners.</p>
+                    <a href="https://www.qurancoaching.com/" target="_blank" class="text-primary fw-bold text-decoration-none">View Website <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+                <div class="col-md-6 order-md-1 bg-dark d-flex align-items-center justify-content-center text-white">
+                    <i class="fas fa-book-open fa-5x"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Ready to boost your traffic?</h2>
+            <div class="mb-4">
+                <a href="mailto:your-email@example.com" class="btn btn-primary btn-custom shadow">Get Free Audit</a>
+            </div>
+            <p class="text-muted mt-5">© 2026 Muhammad Zeeshan | AI-Driven SEO Specialist</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
